@@ -78,5 +78,22 @@ func InitRun(r *cmd.Root, c *cmd.Sub) {
 		}
 		fmt.Printf("  \"id\": \"%s\"\n", peerId)
 		fmt.Println("}")
+
+		idInfo := map[string]string{
+			"name": hostname,
+			"id":   peerId.String(),
+		}
+
+		idJSON, err := json.MarshalIndent(idInfo, "", "  ")
+		if err == nil {
+			idFile, err := os.Create("id.json")
+			if err == nil {
+				_, err = idFile.Write(idJSON)
+				if err == nil {
+					fmt.Println("Peer info saved to id.json")
+				}
+				idFile.Close()
+			}
+		}
 	}
 }
