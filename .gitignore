@@ -1,0 +1,9 @@
+.DS_Store
+result
+result-*
+.data/
+*_generated.go
+.direnv/
+.idea
+examples/Win64
+examples/__history
