@@ -1,5 +1,0 @@
-,
-    {
-      "name": "dev",
-      "id": "12D3KooWHQ6JBSubXbJGtXKEeXN1G5Vs6JbyNbeQyGbLh5frrRLH"
-    }
